@@ -30,9 +30,7 @@ public class Level1 implements Level {
             new Obstacle(physicsWorld, new Vector2(15, 1), new CwtfGame.Dimension<Float>(1f, 3f));
             new Obstacle(physicsWorld, new Vector2(15, 4), new CwtfGame.Dimension<Float>(5f, 1f));
             new Obstacle(physicsWorld, new Vector2(19, 3), new CwtfGame.Dimension<Float>(1f, 1f));
-            new Obstacle(physicsWorld, new Vector2(19, 1), new CwtfGame.Dimension<Float>(2f, 2f));
-            new Obstacle(physicsWorld, new Vector2(21, 1), new CwtfGame.Dimension<Float>(2f, 1f));
-            new Obstacle(physicsWorld, new Vector2(23, 1), new CwtfGame.Dimension<Float>(2f, 2f));
+            new Obstacle(physicsWorld, new Vector2(19, 2), new CwtfGame.Dimension<Float>(6f, 1f));
             new Obstacle(physicsWorld, new Vector2(24, 3), new CwtfGame.Dimension<Float>(1f, 18f));
             new Obstacle(physicsWorld, new Vector2(19, 20), new CwtfGame.Dimension<Float>(5f, 1f));
             new Obstacle(physicsWorld, new Vector2(19, 21), new CwtfGame.Dimension<Float>(1f, 3f));

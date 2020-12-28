@@ -31,8 +31,8 @@ public class Player implements Renderable {
     private int world;
 
     public Player(World physicsWorld, Vector2 gridPosition, int world) {
-        walkLeftAnimation = new Animation(0.3f, CwtfGame.sprites[world * 2]);
-        walkRightAnimation = new Animation(0.3f, CwtfGame.sprites[world * 2 + 1]);
+        walkLeftAnimation = new Animation<TextureRegion>(0.3f, (TextureRegion[]) CwtfGame.sprites[world * 2]);
+        walkRightAnimation = new Animation<TextureRegion>(0.3f, (TextureRegion[]) CwtfGame.sprites[world * 2 + 1]);
         animationTime = 0f;
         this.world = world;
 
@@ -131,9 +131,9 @@ public class Player implements Renderable {
         }
 
         if (lastMotionKey == Input.Keys.RIGHT || lastMotionKey == Input.Keys.D) {
-            currentFrame = walkRightAnimation.getKeyFrame(animationTime, true);
+            currentFrame = (TextureRegion) walkRightAnimation.getKeyFrame(animationTime, true);
         } else {
-            currentFrame = walkLeftAnimation.getKeyFrame(animationTime, true);
+            currentFrame = (TextureRegion) walkLeftAnimation.getKeyFrame(animationTime, true);
         }
 
         if (currentFrame != null) {
