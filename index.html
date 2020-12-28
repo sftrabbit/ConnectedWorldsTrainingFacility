@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+       <head>
+              <title>Connected Worlds Training Facility</title>
+              <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+              <link href="styles.css" rel="stylesheet" type="text/css">
+              <script src="soundmanager2-setup.js"></script>  
+  			  <script src="soundmanager2-jsmin.js"></script> 
+       </head>
+       
+       <body>              
+              <div align="center" id="embed-html"></div>
+              <script type="text/javascript" src="html/html.nocache.js"></script>
+              <p>This game prototype was developed in 48 hours by <a href="http://josephmansfield.uk/">Joseph Mansfield</a> for <a href="http://www.ludumdare.com/">Ludum Dare 30</a>. There are a few known bugs.</p>
+              <p>For more details, see the <a href="http://www.ludumdare.com/compo/ludum-dare-30/?action=preview&uid=26559">Ludum Dare entry</a>. If you enjoy the prototype, feel free to give provide a comment (please!).</p>
+              <a class="button" href="http://ludumdare.com/compo/ludum-dare-30/?action=preview&uid=26559">Comment</a>
+              <p style="text-align: center"><a href="https://twitter.com/sftrabbit" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @sftrabbit</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+       </body>
+       
+       <script>
+              function handleMouseDown(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+                evt.target.style.cursor = 'default';
+              }
+              
+              function handleMouseUp(evt) {
+                evt.preventDefault();
+                evt.stopPropagation();
+                evt.target.style.cursor = '';
+              }
+
+              document.getElementById('embed-html').addEventListener('mousedown', handleMouseDown, false);
+              document.getElementById('embed-html').addEventListener('mouseup', handleMouseUp, false);
+
+              window.addEventListener("keydown", function(e) {
+                if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                    e.preventDefault();
+                }
+              }, false);
+       </script>
+</html>
